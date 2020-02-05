@@ -1,0 +1,30 @@
+#!/bin/bash
+clear
+cd files
+
+for i in $(grep -v "#" locations);
+do
+  file=$(echo $i | cut -d';' -f1)
+  location=$(echo $i | cut -d';' -f2 | sed 's@~@'$HOME'@') 
+  fullPath=$location/$file
+
+  if [ ! -d $location ]; then
+    echo -e "\tCreating $location"
+    mkdir -p $location
+  fi
+
+  if [ ! -f $fullPath ]; then
+    echo -e "\tTransfering $file"
+    cp $file $location
+  else
+    echo -e "\tComparing files"
+    md5sum $file 
+    md5sum $fullPath 
+    current=$(md5sum $file | cut -d\  -f1)
+    local=$(md5sum $fullPath | cut -d\  -f1)
+    if [ "$current" != "$local" ]; then
+      echo -e "\tReplacing file"
+      cp $file $location
+    fi
+  fi
+done
