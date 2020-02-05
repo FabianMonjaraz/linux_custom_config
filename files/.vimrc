@@ -100,3 +100,4 @@ set foldenable
 set foldmethod=indent
 
 " set relativenumber
+" 
