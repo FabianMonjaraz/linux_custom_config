@@ -1,0 +1,32 @@
+#!/bin/bash
+export VISUAL=vim
+export EDITOR=$VISUAL
+
+function deezloader(){
+  cd /opt/DeezloaderRemix
+  npm start &
+  cd -
+}
+function cdm(){
+  if [ ! -d $1 ]; then
+    mkdir $1
+  fi
+  cd $1
+}
+
+cd ~/.customConfig
+
+
+if [ -f .manageConfigs ]; then
+  . .manageConfigs
+fi
+
+if [ -f .bash_aliases ]; then
+  . .bash_aliases
+fi
+
+if [ -f .bash_prompt ]; then
+  . .bash_prompt
+fi
+
+cd - 1>/dev/null
