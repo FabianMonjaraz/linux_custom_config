@@ -65,7 +65,6 @@ set showcmd
 " nnoremap / /\v
 " vnoremap / /\v
 " set hlsearch
-"
 set incsearch
 set ignorecase
 set smartcase
