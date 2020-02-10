@@ -65,6 +65,7 @@ set showcmd
 " nnoremap / /\v
 " vnoremap / /\v
 " set hlsearch
+"
 set incsearch
 set ignorecase
 set smartcase
@@ -100,4 +101,4 @@ set foldenable
 set foldmethod=indent
 
 " set relativenumber
-" 
+let g:netrw_liststyle = 3
