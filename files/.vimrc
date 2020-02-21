@@ -18,8 +18,6 @@ filetype plugin indent on
 " Security
 set modelines=0
 
-" Show line numbers
-set number
 
 " Show file stats
 set ruler
@@ -44,10 +42,6 @@ set backspace=indent,eol,start
 set matchpairs+=<:> " use % to jump between pairs
 runtime! macros/matchit.vim
 
-" Move up/down editor lines
-nnoremap j gj
-nnoremap k gk
-
 " Allow hidden buffers
 set hidden
 
@@ -61,11 +55,6 @@ set laststatus=2
 set showmode
 set showcmd
 
-" Searching
-" nnoremap / /\v
-" vnoremap / /\v
-" set hlsearch
-"
 set incsearch
 set ignorecase
 set smartcase
@@ -89,16 +78,26 @@ set listchars=tab:▸\ ,eol:¬
 " Or use your leader key + l to toggle on/off
 map <leader>l :set list!<CR> " Toggle tabs and EOL
 
-" Color scheme (terminal)
-set t_Co=256
-set background=dark
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-" put https://raw.github.com/altercation/vim-colors-solarized/master/colors/solarized.vim
-" in ~/.vim/colors/ and uncomment:
-" colorscheme solarized
-set foldenable
-set foldmethod=indent
 
-" set relativenumber
+
+
+" Configuration for netrw
 let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+
+" Line number
+set number
+
+" Color schemes
+"
+"     Clear scheme
+" colorscheme industry
+" colorscheme murphy
+"
+"     Dark scheme
+ colorscheme torte
+" colorscheme pablo
+
+" Tracking the cursor
+set cursorline 
+set cursorcolumn 
