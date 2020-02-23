@@ -5,3 +5,4 @@
 .bashrc;~
 .vimrc;~
 locations;~/.customConfig
+config;/home/dm0n/.config/i3
