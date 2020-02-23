@@ -2,11 +2,6 @@
 export VISUAL=vim
 export EDITOR=$VISUAL
 
-function deezloader(){
-  cd /opt/DeezloaderRemix
-  npm start &
-  cd -
-}
 function cdm(){
   if [ ! -d $1 ]; then
     mkdir $1
