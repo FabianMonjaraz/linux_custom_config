@@ -27,4 +27,5 @@ do
       cp $file $location
     fi
   fi
+  echo -e
 done
