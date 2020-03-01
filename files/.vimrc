@@ -100,3 +100,5 @@ set number
 " Tracking the cursor
 set cursorline 
 set cursorcolumn 
+
+set formatoptions-=cro

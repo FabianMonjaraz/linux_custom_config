@@ -3,7 +3,9 @@ projectDir="/opt/linux_custom_config"
 localDir="${HOME}/.customConfig"
 
 function documentedPath(){
-   grep -q $(basename $1) ${localDir}/locations && echo $(grep $(basename $1) ${localDir}/locations | cut -d';' -f2 | sed 's@~@'$HOME'@')/$(grep $(basename $1) ${localDir}/locations | cut -d';' -f1)
+#   grep -q "^$(basename $1);" ${localDir}/locations && echo $(grep $(basename $1) ${localDir}/locations | cut -d';' -f2 | sed 's@~@'$HOME'@')/$(grep $(basename $1) ${localDir}/locations | cut -d';' -f1)
+  
+  grep "^$(basename $1);" ${localDir}/locations 
 }
 function managePath(){
   if [ -f $1 ]; then

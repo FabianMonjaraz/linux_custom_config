@@ -1,6 +1,5 @@
 alias _="sudo"
 alias src="source ~/.bashrc"
 alias ll="ls -lath"
-alias rtv="rtv --enable-media"
 alias ironFist="cd /media/Iron_Fist"
 alias lcc="cd /opt/linux_custom_config"
