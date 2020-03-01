@@ -15,7 +15,7 @@ do
 
   if [ ! -f $fullPath ]; then
     echo -e "\tTransfering $file"
-    cp $file $location
+    cp -r $file $location
   else
     echo -e "\tComparing files"
     md5sum $file 
@@ -24,7 +24,7 @@ do
     local=$(md5sum $fullPath | cut -d\  -f1)
     if [ "$current" != "$local" ]; then
       echo -e "\tReplacing file"
-      cp $file $location
+      cp -r $file $location
     fi
   fi
   echo -e
